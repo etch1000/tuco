@@ -1,0 +1,23 @@
+[package]
+name = "app-ssr"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "app_ssr"
+path = "src/library/mod.rs"
+doc = true
+
+[dependencies]
+actix-web = "*"
+actix-files = "*"
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+tera = "*"
+awc = "*"
+sqlx = { version = "*", default-features = false, features = ["postgres", "macros", "chrono", "runtime-tokio-native-tls"] }
+dotenvy = "*"
+rust-argon2 = "*"
+
+[dev-dependencies]
+actix-rt = "*"
